@@ -1,0 +1,94 @@
+@use 'Variables';
+.fa_Persons
+{
+   
+    .heading
+    {
+        h3 {
+
+            font-weight: 700;
+            font-size: Variables.$font_size_heading_LT ;
+        }
+    }
+    img 
+    {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 5%;
+        opacity: 0.8;
+        transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+        cursor: pointer;
+        &:hover
+        {
+            opacity:1;
+            transform: translateY(-2%);
+        }
+    }
+    .fa_info
+    {
+        position: relative;
+        h3 {
+            position: absolute;
+            left: 35%;
+            right: 30%;
+            bottom: 5%;
+            font-weight: 800;
+            color: Variables.$white;
+            text-shadow:
+                0 0 7px #fff,
+                0 0 10px #fff,
+                0 0 21px #fff,
+                0 0 31px #fff,
+                0 0 42px #0fa,
+                0 0 82px #0fa,
+                0 0 92px #0fa,
+                0 0 102px #0fa,
+                0 0 122px #0fa,
+                0 0 151px #0fa,
+                0 0 200px #0fa;
+        }
+    }
+   
+}
+// Moblie Responesive
+@media only screen and (min-width: 576px)  {
+    .fa_Persons
+    {
+        .heading
+        {
+            h3 {
+
+                font-weight: 700;
+                font-size: Variables.$font_size_heading_phone ;
+            }
+        }
+        .fa_info
+        {
+            h3 {
+                font-size: Variables.$fonet_size_par_phone ;
+            }
+        }
+    }
+}
+// Laptop Responesive
+@media only screen and (min-width: 768px)  {
+    .fa_Persons
+    {
+        .heading
+        {
+            h3 {
+
+                font-weight: 700;
+                font-size: Variables.$font_size_heading_LT ;
+            }
+        }
+        .fa_info
+        {
+            h3 {
+                font-weight: 900;
+                font-size: 28px ;
+                left: 25%;
+            }
+        }
+    }
+}

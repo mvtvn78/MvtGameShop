@@ -1,0 +1,54 @@
+@use 'Variables';
+.footer
+{
+    background: Variables.$black;
+    .logo
+    {
+        img {
+            width: 100%;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    }
+    
+    .info_left
+    {
+            // Using Adding Suffixes
+            >.icon_left
+            {
+                .icon
+                {
+                    cursor: pointer;
+                    font-size: Variables.$font_size_icon;
+                    color :Variables.$ytb;
+                    &__github {
+                        cursor: pointer;
+                        font-size: Variables.$font_size_icon;
+                        color:Variables.$white;
+                    }
+                    &__fb {
+                        cursor: pointer;
+                        font-size: Variables.$font_size_icon;
+                        color: Variables.$fb;
+                    }
+                }
+                
+            }
+    }
+    iframe
+    {
+        border-radius: 2%;
+    }
+    .item
+    {
+        background: Variables.$bg_footer_details;
+        
+        color: Variables.$whiteblur;
+        text-align: center;
+        &:hover
+        {
+            color: Variables.$white;
+            border-bottom: 1px solid Variables.$white;
+        }
+    }
+}

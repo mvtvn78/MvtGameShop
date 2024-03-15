@@ -1,0 +1,75 @@
+@use 'Variables';
+.out_productions
+{
+    .out_productions_head  
+    {
+        h3 {
+            float: left;
+            margin-left: 40%;
+            font-size: Variables.$font_size_heading_LT;
+        }
+        button
+        {
+            float: right;
+            cursor: pointer;
+            margin: 10px 0;
+        }
+        
+    }
+}
+
+.products
+{
+    padding: 1%;
+    cursor: pointer;
+    &:hover
+    {
+        img 
+        {  
+            transform: scale(1.1);
+            object-fit: cover;
+        }
+        h3
+        {
+            color: Variables.$white ;
+        }
+        span.price {
+            color: Variables.$white ;
+        }
+        .type_os
+        {
+            color: Variables.$white ;
+        }
+    }
+}
+
+// Moblie Responesive
+@media only screen and (min-width: 576px)  {
+    .out_productions
+    {
+        .out_productions_head  
+        {
+            h3 {
+                float: none;
+                margin: 0;
+                text-align: center;
+                font-size: Variables.$font_size_heading_phone;
+            }
+        }
+    }
+}
+// Tablet Responesive
+@media only screen and (min-width: 768px)  {
+    .out_productions
+    {
+        .out_productions_head  
+        {
+            h3 {
+                float: none;
+                margin: 0;
+                text-align: center;
+                font-size: Variables.$font_size_heading_LT;
+            }
+        }
+    }
+}

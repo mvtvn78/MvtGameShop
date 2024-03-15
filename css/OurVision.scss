@@ -1,0 +1,74 @@
+@use 'Variables';
+.OurVis_head
+{
+    h3 {
+        font-size:Variables.$font_size_heading_LT;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+    p
+    {
+        font-size: Variables.$font_size_par_LT;
+    }
+}
+.OurVis_foot
+{
+   gap:5%;
+   svg{
+    cursor: pointer;
+    color: Variables.$whiteblur;
+    transition: all .5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    &:hover
+    {
+        color: Variables.$white;
+    }
+   }
+}
+.OurVis_footer
+{
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: 5%;
+        object-fit: cover;
+        cursor: pointer;
+        opacity: 0.9;
+        transition: all .5s;
+        &:hover
+        {
+            opacity: 1;
+            transform: translate(2%,1%);
+        }
+    }
+}
+
+// Moblie Responesive
+@media only screen and (min-width: 576px)  {
+    .OurVis_head
+    {
+        h3 {
+            font-size:Variables.$font_size_heading_phone;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        p
+        {
+            font-size: Variables.$fonet_size_par_phone;
+        }
+    }
+}
+// Laptop Responesive
+@media only screen and (min-width: 768px)  {
+    .OurVis_head
+    {
+        h3 {
+            font-size:Variables.$font_size_heading_LT;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        p
+        {
+            font-size: Variables.$font_size_par_LT;
+        }
+    }
+}

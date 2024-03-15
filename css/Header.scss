@@ -1,0 +1,158 @@
+@use 'Variables';
+.container_header
+{
+    .header{
+       
+        background: Variables.$black;
+        .logo
+        {
+            width: 25%;
+            border-radius: 50%;
+            cursor: pointer;
+            transform: translateY(5%);
+        }
+        .find
+        {
+            font-size: Variables.$font_size_icon;
+            color: Variables.$whiteblur;
+            transition: all .5s;
+            transform: translate(10%,10%);
+            cursor: pointer;
+            &:hover
+            {
+                color: Variables.$white;
+            }
+        }
+        button {
+            cursor: pointer;
+            font-size:Variables.$font_size_nav ;
+            font-weight: 800;
+            outline: none;
+            background: none;
+            transform:  scale(1.2);
+            border: none;
+            font-weight: 400;
+            text-transform: uppercase;
+            position: relative;
+            transition: all .5s;
+            &::after
+            {
+                transition: all .5s;
+            }
+
+            &:hover
+            {
+                color: Variables.$emphasize_green;
+                &::after
+                {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 20%;
+                    transform: rotate(30deg);
+                    height: 5%;
+                    width: 60%;
+                    background:  Variables.$emphasize_green;
+                }
+            }
+            &:active
+            {
+                color: Variables.$emphasize_green;
+                &::after
+                {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 20%;
+                    transform: rotate(30deg);
+                    height: 5%;
+                    width: 60%;
+                    background:  Variables.$emphasize_green;
+                }
+            }
+        }
+        button.sign_in{
+           transition: all 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) ;
+        }
+        button#bar_toogle{
+            transition: all 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) ;
+        }
+    }
+}
+// Moblie Responesive
+@media only screen and (min-width: 576px) and (max-width:1199px)  {
+    .container_header
+    {
+        .header{
+           
+            .logo
+            {
+                width: 35%;
+                border-radius: 50%;
+                cursor: pointer;
+                transform: translateY(5%);
+            }
+          
+            button {
+                cursor: pointer;
+                font-size:Variables.$font_size_nav ;
+                font-weight: 800;
+                transform:  scale(1.2);
+                font-weight: 400;
+                text-transform: uppercase;
+                position: relative;
+                transition: all .5s;
+                &::after
+                {
+                    transition: all .5s;
+                }
+    
+                &:hover
+                {
+                    color: Variables.$emphasize_green;
+                    &::after
+                    {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        left: 20%;
+                        transform: rotate(30deg);
+                        height: 5%;
+                        width: 60%;
+                        background:  Variables.$emphasize_green;
+                    }
+                }
+                &:active
+                {
+                    color: Variables.$emphasize_green;
+                    &::after
+                    {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        left: 20%;
+                        transform: rotate(30deg);
+                        height: 5%;
+                        width: 60%;
+                        background:  Variables.$emphasize_green;
+                    }
+                }
+            }
+            button.sign_in{
+                transform: scale(3.5) translateY(60%);
+            }
+            button#bar_toogle{
+                transform: scale(3.5) translate(80%,60%);
+                opacity: 1;
+                
+                svg {
+                    transition: all 0.5s;
+                    &:hover
+                    {
+                        color: Variables.$emphasize_green !important;
+                    }
+                }
+            }
+        }
+    }
+}

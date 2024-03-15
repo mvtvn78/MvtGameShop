@@ -1,0 +1,48 @@
+@use "Variables";
+.product_image 
+{
+   img 
+   {
+        max-width: 100%;
+        object-fit: cover;
+        transition: all .2s;
+   }
+}
+.product_footer
+{
+    display: flex;
+    justify-content: space-around;
+    > .type_os
+    {
+        color: Variables.$whiteblur;
+        font-size: Variables.$font_size_icon;
+        transition: all .3s;
+    }
+    >.price
+    {
+        color: Variables.$whiteblur;
+        transition: all .4s;
+    }
+
+}
+.product_info 
+{
+    h3 
+    {
+        position: relative;
+        text-align: center;
+        color : Variables.$whiteblur;
+        transition: all 0.5s;
+        &::after
+        {
+            content: '';
+            position: absolute;
+            left: 15%;
+            right: 15%;
+            bottom: -0.5rem;
+            height: 1px;
+            background: rgba(255,255,255,.2);
+        }
+    }
+    
+}

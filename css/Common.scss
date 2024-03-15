@@ -1,0 +1,50 @@
+@use 'Variables';
+@font-face {
+    font-family: "MyFont";
+    src: local("MyFont"),
+     url("../font/Inconsolata-VariableFont_wdth\,wght.ttf") format("truetype");
+   }
+body 
+{
+    font-family: "MyFont";
+}
+.text_white
+{
+    color: Variables.$white ;
+}
+.text_not_outstading
+{
+    color: Variables.$whiteblur;
+}
+.text_emphasize_green
+{
+    color: Variables.$emphasize_green;
+}
+.text_emphasize_yello
+{
+    color: Variables.$emphasize_yellow;
+}
+.bg_lightdark
+{
+    background: #0F161B;
+}
+.bg_none
+{
+    background: none  !important;
+}
+.cursor_point
+{
+    cursor: pointer;
+}
+.border_none
+{
+    border:  none ;
+}
+.font_size_icon
+{
+    font-size:Variables.$font_size_icon ;
+}
+.text_center
+{
+    text-align: center;
+}

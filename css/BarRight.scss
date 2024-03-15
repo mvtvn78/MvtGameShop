@@ -1,0 +1,22 @@
+@use 'Variables';
+.canvas_lbar
+{
+    background: #0F161B;
+    .heading
+    {
+        h3{
+            color:Variables.$white ;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: Variables.$font_size_canvas;
+            transform: scale(1.5) translate(25%,25%);
+        }
+    }
+}
+.bg_lightdark
+{
+    svg
+    {
+        color: Variables.$whiteblur;
+    }
+}
