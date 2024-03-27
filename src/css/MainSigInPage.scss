@@ -1,0 +1,40 @@
+@use 'Variables';
+
+.main_signIn
+{
+    .btn_sign
+    {
+        display: block !important;
+        button{
+            width: 30%;
+            color: Variables.$white;
+            text-transform: uppercase;
+            font-size: Variables.$font_size_par_phone;
+        }
+    }
+}
+.container_Form,.formchecker
+{
+    label{
+        color:Variables.$white;
+        user-select: none;
+    }
+}
+
+// Moblie Responesive ( >= Iphone SE)
+@media only screen and (min-width: 375px) and (max-width : 768px)  {
+    
+    
+   div.formchecker
+    {
+        // Reset offset of container 
+        margin-left: 35% !important; 
+    }
+    .container_Form,.formchecker
+    {
+        // Reset fontsize
+        label{
+          font-size: 10px;
+        }
+    }
+}

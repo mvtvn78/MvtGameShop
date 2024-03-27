@@ -1,0 +1,68 @@
+@use "Variables";
+.product_image 
+{
+    position: relative;
+   img 
+   {
+        max-width: 100%;
+        object-fit: cover;
+        transition: all .2s;
+        &:hover
+        {
+            //select adjacent element with img and id current and set it's no width
+            +img#sale {
+                width: 0%;
+            }
+        }
+   }
+   img#sale
+   {
+        position: absolute;
+        width: 20%;
+        top: 0;
+        left: 0;
+        opacity: 0.77;
+        transition: all .3s;
+   }
+}
+.product_footer
+{
+    display: flex;
+    justify-content: space-around;
+    > .type_os
+    {
+        color: Variables.$whiteblur;
+        font-size: Variables.$font_size_icon;
+        transition: all .3s;
+    }
+    >.price
+    {
+        color: Variables.$whiteblur;
+        transition: all .4s;
+        user-select: none;
+    }
+
+}
+.product_info 
+{
+    h3 
+    {
+        position: relative;
+        text-align: center;
+        color : Variables.$whiteblur;
+        transition: all 0.5s;
+        text-transform: uppercase;
+        user-select: none;
+        &::after
+        {
+            content: '';
+            position: absolute;
+            left: 15%;
+            right: 15%;
+            bottom: -0.5rem;
+            height: 1px;
+            background: rgba(255,255,255,.2);
+        }
+    }
+    
+}

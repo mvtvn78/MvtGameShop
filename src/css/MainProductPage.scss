@@ -1,0 +1,74 @@
+@use 'Variables';
+// Hover Product CSS
+.products
+{
+    padding: 1%;
+    cursor: pointer;
+    &:hover
+    {
+        img 
+        {  
+            transform: scale(1.1);
+            object-fit: cover;
+        }
+        h3
+        {
+            color: Variables.$white ;
+        }
+        span.price {
+            color: Variables.$white ;
+        }
+        .type_os
+        {
+            color: Variables.$white ;
+        }
+    }
+}
+.Paginator
+{
+    .page-item.active
+    {
+        span {
+                // Reset Bg of Span to white
+                background: Variables.$white  !important;
+                color: Variables.$black;
+        }
+    }
+    .page-item
+    {
+        // Set Content in pageitem center
+        text-align: center;
+        width: 9%;
+        a {
+            background: #000;
+            color: Variables.$white ;
+            
+        }
+    }
+}
+
+// Moblie Responesive ( >= Iphone SE)
+@media only screen and (min-width: 375px) and (max-width : 768px)  {
+    div.btn-group
+    {
+        // Reset Css
+        display: flex;
+        width: 100%;
+    }
+    div.list_Choice_Product 
+    {
+        // Make scroll x for menu
+            max-width: 100%;
+            display: flex ;
+            overflow-x: scroll;
+            button {
+                text-align: center;
+                max-width: 150% !important; 
+            }
+            &::-webkit-scrollbar
+            {
+                width: 0;
+            }
+    }
+    
+}

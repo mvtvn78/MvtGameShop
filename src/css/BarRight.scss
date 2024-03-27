@@ -1,0 +1,31 @@
+@use 'Variables';
+.canvas_lbar
+{
+    background: #0F161B;
+    .heading
+    {
+        h3{
+            color:Variables.$white ;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: Variables.$font_size_canvas;
+            transform: scale(1.5) translate(25%,25%);
+        }
+    }
+    .item{
+        user-select: none;
+    }
+}
+.bg_lightdark
+{
+    svg
+    {
+        color: Variables.$whiteblur;
+    }
+}
+.offcanvas-header
+{
+   button {
+       background: Variables.$emphasize_green var(--bs-btn-close-bg) center / 1em auto no-repeat;
+   }
+}

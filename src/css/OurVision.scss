@@ -1,0 +1,70 @@
+@use 'Variables';
+// CSS FOR OurVision
+.OurVis_head
+{
+    h3 {
+        font-size:Variables.$font_size_heading_LT;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: white;
+        // like border in boxmodel
+        -webkit-text-stroke: 1px Variables.$white ;
+    }
+    p
+    {
+        font-size: Variables.$font_size_par_LT;
+    }
+}
+.OurVis_foot
+{
+    // Adjust the distance of 2 elements
+    gap:5%;
+    //CSS Icon
+    svg{
+        cursor: pointer;
+        color: Variables.$whiteblur;
+        transition: all .5s cubic-bezier(0.165, 0.84, 0.44, 1);
+        &:hover
+        {
+            color: Variables.$white;
+        }
+    }
+}
+.OurVis_footer
+{
+    position: relative;
+    transition: all 1s;
+    img {
+        // Set image take up the whole parent element
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        border-radius: 9%;
+        object-fit: cover;
+        cursor: pointer;
+        opacity: 0.9;
+        transition: all .5s;
+        &:hover
+        {
+            opacity: 1;
+            transform: translate(2%,1%);
+            // blur 50px
+            filter : drop-shadow(0 0 50px Variables.$emphasize_yellow)
+        }
+    }
+}
+
+// Moblie Responesive (375px  < view <=767px )
+@media only screen and (min-width: 375px)  and (max-width: 767px) {
+    .OurVis_head
+    {
+        h3 {
+            font-size:Variables.$font_size_heading_phone;
+        }
+        p
+        {
+            font-size: 10px;
+        }
+    }
+    
+}

@@ -1,0 +1,130 @@
+@use 'Variables';
+
+.chatbox_trigger
+{
+    z-index: 1000;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: Variables.$size_msgLT;
+    height: Variables.$size_msgLT;
+    img {
+        height: 100%;
+        width: 100%;
+        cursor: pointer;
+        border-radius: 10rem;
+        box-shadow: 5px 1px 20px rgb(1, 1, 217) ,0 5px 30px rgb(30, 30, 183),0 0 40px rgb(70, 70, 152);
+        opacity: .5;
+        transition: all .5s;
+        &:hover{
+            opacity: 1;
+        }
+    }
+}
+.chatbox{
+    z-index: 10000;
+    overflow: hidden;
+    position: fixed;
+    width:Variables.$size_msgChatBoxLT;
+    height:Variables.$size_msgChatBoxLT;
+    text-align: justify;
+    right: 60px;
+    bottom: 40px;
+    color: Variables.$white;;
+    background: rgba(85, 69, 69,0.78);
+    border-radius: 1rem;
+    .chatbox_header
+    {
+        padding-top: 5px;
+        height: 10%;
+        display: flex;
+        background: Variables.$bg_footer_details;
+        justify-content:center;
+        gap: 50%;
+        h3
+        {
+            font-weight: 900;
+            user-select: none;
+            text-transform: uppercase;
+        }
+        svg
+        {
+            font-size: 40px;
+            cursor: pointer;
+        }
+    }
+    .chatbox_body
+    {
+        height: 90%;
+        .body_boxmsg
+        {
+            // Reset CSS 
+            padding: 0;
+            overflow-y: auto;
+            overflow-x: hidden;
+            height: 86%;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap:10px;
+            li {
+                border-radius: 1rem;
+                align-self: flex-start;
+                color: Variables.$black;
+                text-align: justify;
+                // overflowing text strings
+                word-wrap: break-word;
+                width: 70%;
+                padding:10px;
+                margin:5px;
+                background: #D3DCE6;
+                &.user
+                {
+                    background: #007DFF;
+                    align-self: flex-end;
+                    color: Variables.$white;
+                }
+            }
+           
+        }
+        .body_submit
+        {
+            background: white;
+            height:10%;
+            display: flex;
+            justify-content: space-around;
+            #msg_user {
+                // Disable Resizing Textarea
+                resize: none;
+                padding: 3px;
+                flex: 1;
+                outline: none;
+                border: none;
+                &::-webkit-scrollbar {
+
+                    // Disable Scroll of Textarea
+                    display: none;
+                }
+                &:valid +svg {
+                    // textarea valid then visibily for svg
+                    display: block;
+                }
+            }
+            svg{
+                // Set default 
+                display: none;
+                color: Variables.$black;
+                cursor: pointer;
+                font-size: 20px;
+                transform: translate(-7px,10px) ;
+            }
+        }
+    }
+}
+// Moblie Responesive ( >= Iphone SE)
+@media only screen and (min-width: 375px) and (max-width : 768px)  {
+    .chatbox_trigger
+    {
+        display: none !important;
+    }
+}

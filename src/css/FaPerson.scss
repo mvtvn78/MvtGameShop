@@ -1,0 +1,80 @@
+@use 'Variables';
+// CSS for FaPerson
+.fa_Persons
+{
+   
+    .heading
+    {
+        h3 {
+
+            font-weight: 700;
+            font-size: Variables.$font_size_heading_LT ;
+           
+        }
+    }
+    img 
+    {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 5%;
+        opacity: 0.8;
+        transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+        cursor: pointer;
+        &:hover
+        {
+            opacity:1;
+            transform: translate(-1%,-3%);
+            filter: drop-shadow(0 0 50px Variables.$emphasize_green);
+        }
+    }
+    .fa_info
+    {
+        position: relative;
+        h3 {
+            user-select: none;
+            position: absolute;
+            // Prevent event mouse
+            pointer-events: none;
+            font-size: 28px ;
+            left: 35%;
+            right: 30%;
+            bottom: 5%;
+            font-weight: 900;
+            color: Variables.$white;
+            text-shadow:
+                0 0 7px #fff,
+                0 0 10px #fff,
+                0 0 21px #fff,
+                0 0 31px #fff,
+                0 0 42px #0fa,
+                0 0 82px #0fa,
+                0 0 92px #0fa,
+                0 0 102px #0fa,
+                0 0 122px #0fa,
+                0 0 151px #0fa,
+                0 0 200px #0fa;
+        }
+    }
+   
+}
+// Moblie Responesive  
+@media only screen and (min-width: 375px)  and (max-width: 768px) {
+    .fa_Persons
+    {
+        .heading
+        {
+            h3 {
+
+                font-weight: 700;
+                font-size: Variables.$font_size_heading_phone ;
+            }
+        }
+        .fa_info
+        {
+            h3 {
+                font-size: Variables.$font_size_par_phone ;
+                left: 25%;
+            }
+        }
+    }
+}

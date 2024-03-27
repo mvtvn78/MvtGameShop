@@ -1,0 +1,60 @@
+@use 'Variables';
+.contact
+{
+    transition: all .5s;
+    h3 {
+        color: Variables.$white;
+        font-size: 50px;
+        text-align: left;
+        -webkit-text-fill-color: Variables.$white; 
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: Variables.$white;
+        animation: flicker 20.3s infinite alternate-reverse;
+    }
+    span{
+        color: Variables.$emphasize_yellow;
+        font-size:Variables.$font_size_heading_phone;
+    }
+    p{
+        color:Variables.$whiteblur;
+        font-size:Variables.$font_size_par_LT;
+    }
+}
+// Flicker Animation
+@keyframes flicker  {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 31px #fff,
+        0 0 42px #0fa,
+        0 0 82px #0fa,
+        0 0 92px #0fa,
+        0 0 102px #0fa,
+        0 0 151px #0fa,
+    }
+    20%, 24%, 55% {        
+        text-shadow: none;
+    }   
+}
+// Moblie Responesive ( >= Iphone SE)
+@media only screen and (min-width: 375px) and (max-width : 768px)  {
+    .contact
+    {
+        text-align: center;
+        h3 {
+            font-size:Variables.$font_size_heading_phone ;
+            text-align: center;
+        }
+        span{
+            color: Variables.$white;
+        }
+        p{
+            color:Variables.$whiteblur;
+            text-align: center;
+            font-size: Variables.$font_size_par_phone;
+        }
+        
+    }
+}

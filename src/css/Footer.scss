@@ -1,0 +1,81 @@
+@use 'Variables';
+.footer
+{
+    background: Variables.$black;
+    .logo
+    {
+        img {
+            width: 100%;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    }
+    
+    .info_left
+    {
+            // Using Adding Suffixes
+            >.icon_left
+            {
+                .icon
+                {
+                    cursor: pointer;
+                    font-size: Variables.$font_size_icon;
+                    color :Variables.$ytb;
+                    &__github {
+                        cursor: pointer;
+                        font-size: Variables.$font_size_icon;
+                        color:Variables.$white;
+                    }
+                    &__fb {
+                        cursor: pointer;
+                        font-size: Variables.$font_size_icon;
+                        color: Variables.$fb;
+                    }
+                }
+                
+            }
+    }
+    iframe
+    {
+        border-radius: 2%;
+    }
+    .item
+    {
+        background: Variables.$bg_footer_details;
+        cursor: pointer;
+        user-select: none;
+        color: Variables.$whiteblur;
+        text-align: center;
+        &:hover
+        {
+            color: Variables.$white;
+            border-bottom: 1px solid Variables.$white;
+        }
+    }
+}
+// Moblie Responesive 
+@media only screen and (min-width: 375px) and (max-width : 767px)  {
+    .footer
+    {
+        .logo
+        {
+            img {
+                display: none;                
+            }
+        }
+        .log_heading
+        {
+           h3 {
+            margin: 2px 0 !important;
+           }
+        }
+        iframe
+        {
+            margin: 10px 0;
+        }
+        .disable_On_Phone
+        {
+            display: none;
+        }
+    }
+}
