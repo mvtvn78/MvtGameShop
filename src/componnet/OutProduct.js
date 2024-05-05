@@ -66,6 +66,7 @@ function OutProduct({heading})
                     <Product gameSrc={imgs.FiFa} isWin={false} gameHeading="FIFA 21 Version Origin for PC" gamePrice="680.000VNĐ"/>
                 </Reveal>
             </Col>
+            
         </Row>
        
     )

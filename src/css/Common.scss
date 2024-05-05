@@ -73,3 +73,28 @@ button:hover {
 {
     text-align: center;
 }
+// Hover Product CSS
+.products
+{
+    padding: 1%;
+    cursor: pointer;
+    &:hover
+    {
+        img 
+        {  
+            transform: scale(1.1);
+            object-fit: cover;
+        }
+        h3
+        {
+            color: Variables.$white ;
+        }
+        span.price {
+            color: Variables.$white ;
+        }
+        .type_os
+        {
+            color: Variables.$white ;
+        }
+    }
+}

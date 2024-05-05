@@ -18,31 +18,7 @@
     }
 }
 
-.products
-{
-    padding: 1%;
-    cursor: pointer;
-    // Handle Mouse Hover In Product
-    &:hover
-    {
-        img 
-        {  
-            transform: scale(1.1);
-            object-fit: cover;
-        }
-        h3
-        {
-            color: Variables.$white ;
-        }
-        span.price {
-            color: Variables.$white ;
-        }
-        .type_os
-        {
-            color: Variables.$white ;
-        }
-    }
-}
+
 
 // Moblie Responesive 
 @media only screen and (min-width: 375px) and (max-width : 768px)  {
